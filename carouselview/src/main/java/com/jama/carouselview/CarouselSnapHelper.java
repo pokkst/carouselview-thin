@@ -15,9 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CarouselSnapHelper extends LinearSnapHelper {
 
-    private Context context;
     private final int MAX_SCROLL_ON_FLING_DURATION_MS = 1000;
     private final float MILLISECONDS_PER_INCH = 100f;
+    private Context context;
     private OrientationHelper helper = null;
     private Scroller scroller = null;
     private int maxScrollDistance = 0;
