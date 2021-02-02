@@ -100,10 +100,10 @@ public class CarouselView extends FrameLayout {
 
     private void setAdapter() {
         this.layoutManager = new CarouselLinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
-        this.layoutManager.isOffsetStart(true); //TODO remove the need for this call by hardcoding it. we don't really need it.
+        this.layoutManager.isOffsetStart(false); //TODO remove the need for this call by hardcoding it. we don't really need it.
         if (this.getScaleOnScroll()) this.layoutManager.setScaleOnScroll(true);
         carouselRecyclerView.setLayoutManager(this.layoutManager);
-        this.carouselRecyclerView.setAdapter(new CarouselViewAdapter(getCarouselViewListener(), getResource(), getSize(), carouselRecyclerView, this.getSpacing(), true));
+        this.carouselRecyclerView.setAdapter(new CarouselViewAdapter(getCarouselViewListener(), getResource(), getSize(), carouselRecyclerView, this.getSpacing(), false));
         this.snapHelper.attachToRecyclerView(this.carouselRecyclerView);
         this.setScrollListener();
         this.enableAutoPlay();
